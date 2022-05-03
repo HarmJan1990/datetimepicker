@@ -66,7 +66,7 @@ export default function Picker({
       const {current} = _picker;
 
       if (value && onChange && current) {
-        const timestamp = value.getTime();
+        const timestamp = Date.parse(value);
         // $FlowFixMe Cannot call `current.setNativeProps` because property `setNativeProps` is missing in `AbstractComponent` [1].
         current.setNativeProps({
           date: timestamp,
